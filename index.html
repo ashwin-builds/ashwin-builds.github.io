@@ -411,7 +411,7 @@
     document.body.classList.add('laser-active');
 
     var points = [];          // smoothed trail positions
-    var MAX = 9;              // length of the drag trail
+    var MAX = 16;             // length of the drag trail
     var target = { x: w / 2, y: h / 2 };   // raw pointer position
     var eased = { x: w / 2, y: h / 2 };    // eased "laser tip" position
     var active = false;
@@ -449,8 +449,8 @@
       ctx.clearRect(0, 0, w, h);
 
       // ease the laser tip toward the real pointer for smoothness
-      eased.x += (target.x - eased.x) * 0.32;
-      eased.y += (target.y - eased.y) * 0.32;
+      eased.x += (target.x - eased.x) * 0.18;
+      eased.y += (target.y - eased.y) * 0.18;
 
       if (active) {
         points.push({ x: eased.x, y: eased.y });
