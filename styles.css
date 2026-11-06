@@ -385,6 +385,7 @@ nav {
   height: 84px;
   border-radius: 14px;
   object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--hairline);
   flex-shrink: 0;
 }
